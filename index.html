@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Niño Anjelico A. Singh - Data Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F2F2F2]">
+    <!-- Brilliant Blues Color Palette Used: #00A1E4, #0077C0, #005082, #F2F2F2, #2D2D2D -->
+    <!-- Plan: Visualize the user's four projects as a journey of skill acquisition. -->
+    <!-- Section 1 (ETL): Use an HTML/CSS flowchart. -->
+    <!-- Section 2 (Data Science): Use Chart.js Line and Bar charts. -->
+    <!-- Section 3 (AI): Use an HTML/CSS flowchart for the RAG process. -->
+    <!-- Section 4 (ML Ops): Use an HTML/CSS diagram for the deployment pipeline. -->
+    <!-- Section 5 (Skills): Use a Chart.js Radar chart to summarize skills. -->
+    <!-- Confirmation: NO SVG or Mermaid JS were used. -->
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#005082] mb-2">The Journey of a Data Engineer</h1>
+            <p class="text-lg md:text-xl text-[#2D2D2D]">From Raw Data to Deployed AI: A Portfolio by Seth Niño Anjelico A. Singh</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Project 1: Data Engineering -->
+            <section class="bg-white rounded-lg shadow-lg p-6 lg:col-span-2">
+                <h2 class="text-2xl font-bold text-[#0077C0] mb-4">Project 1: The Foundation (Data Engineering)</h2>
+                <p class="text-[#2D2D2D] mb-6">This foundational project involved creating a classic ETL pipeline to automatically collect, clean, and store historical U.S. gas price data. This demonstrates the core competency of moving data reliably from a source to a structured destination.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-center">
+                    <div class="p-4 border-2 border-dashed border-[#00A1E4] rounded-lg">
+                        <div class="text-4xl font-extrabold text-[#005082]">E</div>
+                        <div class="font-semibold text-[#2D2D2D]">Extract</div>
+                        <p class="text-sm text-gray-600">from EIA API</p>
+                    </div>
+                    <div class="text-4xl font-bold text-[#00A1E4]">→</div>
+                    <div class="p-4 border-2 border-dashed border-[#00A1E4] rounded-lg">
+                        <div class="text-4xl font-extrabold text-[#005082]">T</div>
+                        <div class="font-semibold text-[#2D2D2D]">Transform</div>
+                        <p class="text-sm text-gray-600">with Pandas</p>
+                    </div>
+                    <div class="text-4xl font-bold text-[#00A1E4]">→</div>
+                    <div class="p-4 border-2 border-dashed border-[#00A1E4] rounded-lg">
+                        <div class="text-4xl font-extrabold text-[#005082]">L</div>
+                        <div class="font-semibold text-[#2D2D2D]">Load</div>
+                        <p class="text-sm text-gray-600">into SQLite</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project 2: Data Science -->
+            <section class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#0077C0] mb-4">Project 2: Uncovering Insights (Data Science)</h2>
+                <p class="text-[#2D2D2D] mb-6">Building on the collected data, this project showcases the transition from engineering to analysis. By visualizing the time-series data, I identified key trends and built a predictive machine learning model to forecast future prices.</p>
+                <div class="chart-container">
+                    <canvas id="gasPriceLineChart"></canvas>
+                </div>
+            </section>
+            <section class="bg-white rounded-lg shadow-lg p-6">
+                 <h2 class="text-2xl font-bold text-[#0077C0] mb-4">Annual Price Trends & Forecasting</h2>
+                 <p class="text-[#2D2D2D] mb-6">Aggregating the data by year reveals clearer long-term trends. The final step was to train a linear regression model that achieved a high degree of accuracy in predicting future prices based on historical data.</p>
+                <div class="chart-container">
+                    <canvas id="gasPriceBarChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Project 3: AI Engineering -->
+            <section class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#0077C0] mb-4">Project 3: Building Intelligence (AI Engineering)</h2>
+                <p class="text-[#2D2D2D] mb-6">This project demonstrates modern AI skills by building a "chat with your documents" system using a RAG architecture. It allows a user to ask questions in natural language and receive answers generated by Google's Gemini AI.</p>
+                 <div class="flex flex-col space-y-4">
+                    <div class="flex items-center space-x-4"><span class="text-3xl">💬</span><p class="font-semibold text-[#2D2D2D]">User asks a question</p></div>
+                    <div class="text-3xl text-center text-[#00A1E4]">↓</div>
+                    <div class="flex items-center space-x-4"><span class="text-3xl">🔍</span><p class="font-semibold text-[#2D2D2D]">Retrieve relevant text chunks from ChromaDB</p></div>
+                    <div class="text-3xl text-center text-[#00A1E4]">↓</div>
+                    <div class="flex items-center space-x-4"><span class="text-3xl">📄</span><p class="font-semibold text-[#2D2D2D]">Augment prompt with retrieved context</p></div>
+                    <div class="text-3xl text-center text-[#00A1E4]">↓</div>
+                     <div class="flex items-center space-x-4"><span class="text-3xl">💡</span><p class="font-semibold text-[#2D2D2D]">Generate answer with Gemini AI</p></div>
+                </div>
+            </section>
+            
+            <!-- Project 4: ML Ops -->
+            <section class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-[#0077C0] mb-4">Project 4: Delivering Value (ML Ops)</h2>
+                <p class="text-[#2D2D2D] mb-6">The final project bridges the gap between a model and a usable product. I took the trained prediction model, wrapped it in a REST API, and containerized it with Docker, making it a portable and scalable service.</p>
+                 <div class="flex flex-col space-y-4">
+                    <div class="flex items-center space-x-4"><span class="text-3xl">🧠</span><p class="font-semibold text-[#2D2D2D]">Trained ML Model (.joblib)</p></div>
+                    <div class="text-3xl text-center text-[#00A1E4]">↓</div>
+                    <div class="flex items-center space-x-4"><span class="text-3xl">🌐</span><p class="font-semibold text-[#2D2D2D]">Wrapped in FastAPI REST API</p></div>
+                    <div class="text-3xl text-center text-[#00A1E4]">↓</div>
+                    <div class="flex items-center space-x-4"><span class="text-3xl">📦</span><p class="font-semibold text-[#2D2D2D]">Containerized with Docker</p></div>
+                    <div class="text-3xl text-center text-[#00A1E4]">↓</div>
+                     <div class="flex items-center space-x-4"><span class="text-3xl">🚀</span><p class="font-semibold text-[#2D2D2D]">Ready for Cloud Deployment</p></div>
+                </div>
+            </section>
+            
+            <!-- Skills Summary -->
+            <section class="bg-white rounded-lg shadow-lg p-6 lg:col-span-2">
+                 <h2 class="text-2xl text-center font-bold text-[#0077C0] mb-4">Comprehensive Skill Set</h2>
+                 <p class="text-center text-[#2D2D2D] mb-6">This journey has built a well-rounded skill set across the modern data landscape, from foundational engineering to advanced AI deployment.</p>
+                <div class="chart-container" style="height: 400px; max-height: 500px;">
+                    <canvas id="skillsRadarChart"></canvas>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-12">
+            <p class="text-[#2D2D2D]">For a deeper look into these projects, please visit my GitHub profile.</p>
+            <a href="https://github.com/Seto406" target="_blank" class="text-[#0077C0] hover:text-[#00A1E4] font-semibold">github.com/Seto406</a>
+        </footer>
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const chartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#2D2D2D'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    ticks: { color: '#2D2D2D' },
+                    grid: { color: 'rgba(0, 0, 0, 0.1)' }
+                },
+                x: {
+                    ticks: { color: '#2D2D2D' },
+                    grid: { color: 'rgba(0, 0, 0, 0.1)' }
+                }
+            }
+        };
+
+        const gasPriceLineCtx = document.getElementById('gasPriceLineChart').getContext('2d');
+        const gasPriceLineChart = new Chart(gasPriceLineCtx, {
+            type: 'line',
+            data: {
+                labels: ['1995', '2000', '2005', '2010', '2015', '2020', '2025'],
+                datasets: [{
+                    label: 'USD per Gallon',
+                    data: [1.2, 1.5, 2.3, 2.8, 2.4, 2.2, 3.5],
+                    borderColor: '#00A1E4',
+                    backgroundColor: 'rgba(0, 161, 228, 0.1)',
+                    borderWidth: 2,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: { ...chartOptions, scales: { ...chartOptions.scales, y: { ...chartOptions.scales.y, beginAtZero: true } } }
+        });
+
+        const gasPriceBarCtx = document.getElementById('gasPriceBarChart').getContext('2d');
+        const gasPriceBarChart = new Chart(gasPriceBarCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: 'Average Price',
+                    data: [2.7, 2.6, 2.2, 3.0, 3.9, 3.5, 3.3],
+                    backgroundColor: '#0077C0',
+                    borderColor: '#005082',
+                    borderWidth: 1
+                }]
+            },
+            options: { ...chartOptions, scales: { ...chartOptions.scales, y: { ...chartOptions.scales.y, beginAtZero: true } } }
+        });
+        
+        const skillsRadarCtx = document.getElementById('skillsRadarChart').getContext('2d');
+        const skillsRadarChart = new Chart(skillsRadarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Data Engineering', 'Data Science', 'AI Engineering', 'ML Ops', 'Python', 'SQL', 'Cloud & Docker'],
+                datasets: [{
+                    label: 'Proficiency',
+                    data: [9, 8, 7, 7, 9, 8, 7],
+                    backgroundColor: 'rgba(0, 122, 192, 0.2)',
+                    borderColor: '#0077C0',
+                    pointBackgroundColor: '#0077C0',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#0077C0'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: {
+                             font: {
+                                size: 14,
+                                weight: 'bold'
+                            },
+                            color: '#005082'
+                        },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            color: '#2D2D2D'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
